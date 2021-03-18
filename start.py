@@ -1,18 +1,24 @@
 import cv2 as cv
 import numpy as np
 import random
-FILENAME = "static/images/map.jpg"
+FILENAME = "static/images/map2.jpg"
 path = "static/images/"
-WIDTH = 18
-HEIGHT = 24
+WIDTH = 5
+HEIGHT = 8
 
 img = cv.imread(FILENAME, cv.IMREAD_GRAYSCALE)
-lightO = cv.imread(path+"lightO.jpg", cv.IMREAD_GRAYSCALE)
-light1 = cv.imread(path+"light1.jpg", cv.IMREAD_GRAYSCALE)
-darkO = cv.imread(path+"darkO.jpg", cv.IMREAD_GRAYSCALE)
-dark1 = cv.imread(path+"dark1.jpg", cv.IMREAD_GRAYSCALE)
+lightO = cv.imread("WhiteO.png", cv.IMREAD_GRAYSCALE)
+light1 = cv.imread("White1.png", cv.IMREAD_GRAYSCALE)
+darkO = cv.imread("darkO.png", cv.IMREAD_GRAYSCALE)
+dark1 = cv.imread("dark1.png", cv.IMREAD_GRAYSCALE)
 output = np.zeros((len(img), len(img[0])))
 
+
+
+print(lightO)
+print(light1)
+print(darkO)
+print(dark1)
 
 def setImage(img, x, y):
     for i in range(len(img)):
